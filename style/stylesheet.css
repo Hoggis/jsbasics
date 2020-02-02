@@ -1,0 +1,19 @@
+/* css for each of the function containers*/
+.container {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+/* css for explanation of page div*/
+  .upperbar{
+      margin:auto;
+      text-align: center;
+      height: 100px;
+      border-bottom: 3px solid black;
+  }

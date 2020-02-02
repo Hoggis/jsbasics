@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>funkkari sivu</title>
+        <link rel="stylesheet" type ="text/css" href="style/stylesheet.css">
+        <script>
+            //add function
+            function plussaa(){
+                var adder, added;
+                adder = document.getElementById("adder").value;
+                added = parseInt(adder) +7;
+                console.log(added);
+                alert(added);
+            }
+            //multiply function
+            function kerro(){
+                var num1, num2;
+                num1 = document.getElementById("kerrottava").value;
+                num2 = document.getElementById("kertoja").value;
+                multiplied = parseInt(num1) * parseInt(num2);
+                console.log(multiplied);
+                alert(multiplied);
+            }
+            //all caps function
+            function caps(){
+                var teksti, capperino;
+                teksti = document.getElementById("allCaps").value;
+                capperino = teksti.toUpperCase();
+                alert(capperino);
+            }
+            //find the last letter
+            function last(){
+                var lasterino, vika;
+                lasterino = document.getElementById("letter").value;
+                vika = lasterino.charAt(lasterino.length-1);
+                alert(vika);
+            }
+            //alert box test function
+            function helloo(){
+                alert("hello?!?!?!?");
+            }
+        </script>
+    </head>
+    <body>
+        <!--explanation of the page-->
+        <div class="upperbar">
+            <h1>Javascript functions practice page</h1>
+            <p>Functions will return answers with alert boxes.</p>
+        </div>
+        <!--divs for css to create NxN grid layout-->
+        <div class="row">
+            <!--each container holds one part of the grid-->
+            <div class="container">
+                <!--html for the add function-->
+                <div class="add7">
+                    <h1>Add 7 to your number</h1>
+                    <p>The following form will return your number + 7</p>
+                    <form>
+                        <input type="text" id="adder">
+                        <input type="button" onclick="plussaa()" value="Add!">
+                    </form>
+                </div>
+            </div>
+            <div class="container">
+                <!--html for the multiply function-->
+                <div class="multiply">
+                    <h1>Multiplier</h1>
+                    <p>The following text boxes will multiply your numbers</p>
+                    <form>
+                        <input type="text" id="kerrottava">
+                        <input type="text" id="kertoja">
+                        <input type="button" onclick="kerro()" value="multiply">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--second row of functions start here-->
+        <div class="row">
+            <div class="container">
+                <!--html for all caps function-->
+                <div class="toUpper">
+                    <h1>ALL CAPS</h1>
+                    <p>The following text box will convert your text to capital letters</p>
+                    <form>
+                        <input type="text" id="allCaps">
+                        <input type="button" onclick="caps()" value="ALL CAPS!">
+                    </form>
+                </div>
+            </div>
+            <div class="container">
+                <!--html for the last letter function-->
+                <div class="lastLetter">
+                    <h1>Last letter</h1>
+                    <p>The following text box will return the last letter of your string</p>
+                    <form>
+                        <input type="text" id="letter">
+                        <input type="button" onclick="last()" value= "last letter!">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--third row of functions start here-->
+        <div class="row">
+            <div class="container">
+                <!--html for alert box test function-->
+                <div class="hello">
+                    <h1>hello?!?!?!?</h1>
+                    <form>
+                        <button id="hellooo" onclick="helloo()">hello</button>
+                    </form>
+                </div>
+            </div>
+        </div>  
+    </body>
+</html>
